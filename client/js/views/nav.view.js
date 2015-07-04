@@ -13,13 +13,12 @@ var navView = Backbone.View.extend({
     this.template = require('../../templates/nav.template.html');
     this.render();
   },
-  render: function (cat) {
-    console.log("rendering nav", cat);
+  render: function () {
     this.$el.html(_.template(this.template({
       name: 'bbebbe'
     })));
     $('#nav .item').removeClass('active');
-    $('#nav #' + cat).addClass('active');
+
   },
   handleAutoComplete: function(){
     var query = $(".prompt").val();
@@ -48,6 +47,7 @@ var navView = Backbone.View.extend({
           }
         });
     }
+    $('#nav').addClass('active');
   }
 });
 module.exports = navView;

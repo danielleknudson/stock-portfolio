@@ -1,7 +1,7 @@
 var Backbone = require('backbone');
 var _ = require('underscore');
 // Backbone Collection for Stocks
-var StockModel = require('../models/StockModel');
+var StockModel = require('../models/stock.model');
 
 var StockCollection = Backbone.Collection.extend({
   url: '/api/stocks',
